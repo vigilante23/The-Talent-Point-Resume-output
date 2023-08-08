@@ -2,7 +2,7 @@ import streamlit as st
 import os
 import re
 import openai
-import dotenv
+
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
@@ -11,8 +11,8 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
 from langchain.chains import RetrievalQA
-require('dotenv').config()
-OPENAI_API_KEY= process.env.OPENAI_API_KEY
+os.environ["OPENAI_API_KEY"] = "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"
+
 
 st.set_page_config(page_title="CHECK DETAILS FROM YOUR RESUME")
 st.header("Find the Right Talent for Your Business")
