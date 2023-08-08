@@ -10,7 +10,8 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
 from langchain.chains import RetrievalQA
-OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
+require('dotenv').config()
+OPENAI_API_KEY= process.env.OPENAI_API_KEY
 
 st.set_page_config(page_title="CHECK DETAILS FROM YOUR RESUME")
 st.header("Find the Right Talent for Your Business")
