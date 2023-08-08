@@ -30,11 +30,12 @@ if pdf is not None:
         chunk_overlap=200,
         length_function=len
       )
+      chunks=[]
       chunks = text_splitter.split_text(text)
 
-embeddings = OpenAIEmbeddings()
-knowledge_base = FAISS.from_texts(chunks, embeddings)
+      embeddings = OpenAIEmbeddings()
+      knowledge_base = FAISS.from_texts(chunks, embeddings)
 
-st.write(knowledge_base)
+      st.write(knowledge_base)
         
          
