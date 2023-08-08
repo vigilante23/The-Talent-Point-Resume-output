@@ -9,7 +9,7 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
 from langchain.chains import RetrievalQA
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 def main():
     st.set_page_config(page_title="Ask your PDF")
