@@ -10,7 +10,7 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
 from langchain.chains import RetrievalQA
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 st.set_page_config(page_title="CHECK DETAILS FROM YOUR RESUME")
 st.header("Find the Right Talent for Your Business")
