@@ -41,7 +41,8 @@ if pdf is not None:
       query = "Please provide the following candidate details: Name, Email, Phone Number, Education, Experience, skills, DOB. Please provide each data nect line and add one blank line so that easy to understand and also add heading infront of that record."
       qa = RetrievalQA.from_chain_type(llm=OpenAI(), chain_type="stuff", retriever=knowledge_base.as_retriever())
       paragraph = qa.run(query)
-      st.write(paragraph)
+      formatted_paragraph = paragraph.replace(" | ", "\n").replace("Email:", "\nEmail:").replace("Phone:", "\nPhone:").replace("Education:", "\nEducation:").replace("Experience:", "\nExperience:").replace("Skills:", "\nSkills:").replace("Interpersonal Skills:", "\nInterpersonal Skills:").replace("DOB:", "\nDOB:")
+      st.write(formatted_paragraph)
       
 
       with st.sidebar:
