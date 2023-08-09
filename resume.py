@@ -38,8 +38,11 @@ if pdf is not None:
       embeddings = OpenAIEmbeddings()
       knowledge_base = FAISS.from_texts(chunks, embeddings)
       
-      query = "Candidate name, email, number, education and experience all details with double semicolon seperated(;;)"
+      query = "Candidate name, email, number, education and experience print all details in new line \n"
       qa = RetrievalQA.from_chain_type(llm=OpenAI(), chain_type="stuff", retriever=knowledge_base.as_retriever())
+      paragraph = qa.run(query)
+      st.write(paragraph)
+      
 
       with st.sidebar:
           user_question = st.text_input("Ask a question about your PDF:")
