@@ -11,7 +11,7 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
 from langchain.chains import RetrievalQA
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = API
 
 
 st.set_page_config(page_title="CHECK DETAILS FROM YOUR RESUME")
