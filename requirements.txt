@@ -1,7 +1,7 @@
-langchain==0.0.257
-PyPDF2==3.0.1
-streamlit==1.25.0
-openai>=0.27.0
+langchain
+PyPDF2
+streamlit
+openai
 faiss-cpu
 tiktoken
 python-dotenv
